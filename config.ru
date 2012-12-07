@@ -1,14 +1,7 @@
-use Rack::Static, 
-  :urls => ["/stylesheets", "/images"],
-  :root => "public"
+require "rubygems"
+require "bundler"
 
-run lambda { |env|
-  [
-    200, 
-    {
-      'Content-Type'  => 'text/html', 
-      'Cache-Control' => 'public, max-age=86400' 
-    },
-    File.open('public/jssdkouth2.html', File::RDONLY)
-  ]
-}
+Bundler.require
+
+require "./app"
+run Sinatra::Application

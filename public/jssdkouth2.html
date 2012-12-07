@@ -54,7 +54,7 @@
                 }
                 
                 // run once with current status and whenever the status changes
-                //FB.getLoginStatus(updateButton);
+                FB.getLoginStatus(updateButton);
                 FB.Event.subscribe('auth.statusChange', updateButton);	
             };
             (function() {

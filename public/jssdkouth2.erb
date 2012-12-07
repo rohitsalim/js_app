@@ -3,9 +3,6 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <title>New JavaScript SDK & OAuth 2.0 based FBConnect Tutorial | Thinkdiff.net</title>
-        <!--
-            @author: Mahmud Ahsan (http://mahmud.thinkdiff.net)
-        -->
     </head>
     <body>
         <div id="fb-root"></div>
@@ -59,7 +56,7 @@
             };
             (function() {
                 var e = document.createElement('script'); e.async = true;
-                e.src = 'https://connect.facebook.net/en_US/all.js';
+                e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
                 document.getElementById('fb-root').appendChild(e);
             }());
             
